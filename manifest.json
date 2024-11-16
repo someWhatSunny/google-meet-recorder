@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Google-Meet-Recorder",
+    "version": "1.0",
+  
+    "description": "Record google meetings",
+
+    "background": {
+        "scripts": ["recorder.js"]
+      },
+  
+    "icons": {
+      "48": "icons/Google_Meet-Logo.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.meet.google.com/*"],
+        "js": ["recorder.js"]
+      }
+    ],
+
+    "browser_action": {
+        "default_popup": "popup/index.html",
+        "default_icon": {
+          "32": "icons/Google_Meet-Logo.png"
+        }
+      }
+  }
+  
